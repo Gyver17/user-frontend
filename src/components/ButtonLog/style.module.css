@@ -1,0 +1,35 @@
+.button {
+    width: 15rem;
+    padding: 1rem;
+    border: unset;
+    border-radius: 0.5rem;
+    color: var(--quintenary);
+    z-index: 1;
+    background: var(--primary);
+    position: relative;
+    font-weight: 1000;
+    font-size: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.button:hover::before {
+    width: 100%;
+}
